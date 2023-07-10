@@ -1,0 +1,132 @@
+.container {
+  width: 90%;
+  margin: auto;
+}
+
+/* EXTRA-LARGE SCREEN */
+@media (min-width: 900px) {
+  .container {
+    width: 900px;
+    margin: auto;
+  }
+}
+
+/* LARGE SCREEN */
+@media (min-width: 701px) {
+  .top-nav-mobile {
+    display: none;
+  }
+
+  .top-nav > ul {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+    grid-template-rows: 40px;
+    align-items: center;
+    text-align: center;
+  }
+
+  .top-nav li:hover {
+    background-color: var(--primary-yellow);
+  }
+
+  .call-to-action-container,
+  .specials,
+  .testimonials,
+  .about,
+  .template-page-hero,
+  .template-page-content,
+  .booking-form,
+  .booking-details,
+  .menu-content {
+    padding: var(--module-padding-lg);
+  }
+
+  .hero-image {
+    width: 250px;
+    height: 300px;
+  }
+
+  .specials {
+    padding-bottom: 2rem;
+  }
+
+  .specials-card-wrapper {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+  }
+
+  .specials-card {
+    grid-template-columns: auto;
+    border: none;
+  }
+
+  .card-content {
+    background-color: var(--secondary-white);
+    padding: 1rem 0;
+  }
+
+  .specials .description {
+    height: 125px;
+  }
+
+  .card-image {
+    max-height: 140px;
+    grid-row-start: 1;
+    justify-self: center;
+    border-top-left-radius: 16px;
+    border-top-right-radius: 16px;
+  }
+
+  .about {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .double-image {
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+
+  .double-image > img {
+    height: 338px;
+    max-width: 272px;
+  }
+
+  .double-image-low {
+    grid-column: 1 / 6;
+    grid-row: 2/ 5;
+  }
+
+  .double-image-up {
+    grid-column: 4 / 9;
+    grid-row: 1 / 4;
+  }
+
+  .footer-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 2rem 0;
+  }
+
+  .footer-nav {
+    display: contents;
+  }
+
+  .menu-content {
+    grid-template-columns: 1fr 1fr;
+    margin: auto;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 700px) {
+  .top-nav {
+    display: none;
+  }
+  .hamburger-btn {
+    justify-self: end;
+    width: 80px;
+    border: none;
+  }
+}
